@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo web</title>
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="App.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Catálogo de vehículos</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- Aplicación / Función de la pagina -->
+        <div id="App" class="row pt-5">
+
+
+            <!-- Formulario -->
+            <!--  -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header hText">
+                        <h4>Agregar nuevo vehículo</h4>
+                    </div>
+                    <form id="product-form" class="card-body">
+                        <div class="form-group">
+                            <input type="text" id="marca" placeholder="Marca" class="form-control input-border">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="vehiculo" placeholder="Vehículo" class="form-control input-border">
+                        </div>                        
+                        <!-- <div class="form-group">
+                            <input type="number" id="price" step="0.01" placeholder="Vehiculo"
+                                class="form-control input-border">
+                        </div> -->
+                        <div class="form-group">
+                            <input type="number" id="anio" min="1900" max="2099" step="1" value="2021"
+                                class="form-control input-border">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="tipo" placeholder="Clase - Tipo" class="form-control input-border">
+                        </div>
+                        <input type="submit" value="Save" class="btn btn-primary btn-block input-border">
+                    </form>                  
+                </div>
+            </div>
+
+            <!-- Muestra lista de productos agregados en memoria / cambiar por tabla -->
+            <div id="product-list" class="col-md-8"></div>
+        </div>
+    </div>
+
+    <script src="App.js" type="module"></script>
+
+</body>
+</html>
